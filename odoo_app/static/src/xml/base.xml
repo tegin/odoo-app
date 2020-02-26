@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="UserMenu.Actions">
+        <t t-jquery=".divider" t-operation="after">
+             <li><a href="#" data-menu="qrsession">Session QR</a></li>
+        </t>
+    </t>
+</templates>
