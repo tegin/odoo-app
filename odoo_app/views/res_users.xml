@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2020 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="view_users_form">
+        <field name="name">res.users.form (in odoo_app)</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']">
+                <button name="generate_login_qr" type="object" icon="fa-qrcode"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>

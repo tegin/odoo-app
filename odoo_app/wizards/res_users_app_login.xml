@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2020 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="res_users_app_login_form_view">
+        <field name="name">res.users.app.login.form (in odoo_app)</field>
+        <field name="model">res.users.app.login</field>
+        <field name="arch" type="xml">
+            <form string="Res Users App Login">
+                <group>
+                    <field name="user_id" invisible="1"/>
+                    <field name="qr_data" invisible="1"/>
+                    <field name="qr_image" required="1" widget="image"/>
+                </group>
+                <footer>
+                    <button string="Cancel"
+                            class="btn-default"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="res_users_app_login_act_window">
+        <field name="name">Res Users App Login</field> <!-- TODO -->
+        <field name="res_model">res.users.app.login</field>
+        <field name="view_mode">form</field>
+        <field name="context">{}</field>
+        <!--<field name="target">new</field>-->
+    </record>
+
+<!--
+    <record model="ir.ui.menu" id="res_users_app_login_menu">
+        <field name="name">Res Users App Login</field>
+        <field name="parent_id" ref="xmlid of parent menu"/>
+        <field name="action" ref="res_users_app_login_act_window"/>
+        <field name="sequence" eval="16"/>
+    </record>
+    -->
+</odoo>
